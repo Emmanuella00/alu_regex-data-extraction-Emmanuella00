@@ -1,96 +1,84 @@
-Regex Onboarding Hackathon 
+# 🔍 Regex Data Extraction Tool  
 
-Welcome to the Regex - Onboarding Hackathon tool, a tool that will help us extract critical data like emails, URLs, Phone numbers, Credit card numbers, Hashtags, Html tags, time formats and currency values.
+**A Python tool to extract special  data patterns (emails, URLs, phone numbers, etc.) using optimized regex.**  
 
-Project Overview
-This project is a python Project designed to identify and extract key patterns from text using highly optimized regex patterns. 
+---
 
-Features
-Extracts the following patterns:
+## 🚀 Project Overview  
+This Python tool identifies and extracts structured data from text using **highly optimized regular expressions**. Perfect for onboarding hackathons or data preprocessing tasks!  
 
-Email addresses (e.g., user@example.com, firstname.lastname@company.co.uk)
+---
 
-URLs (e.g., https://www.example.com, http://subdomain.example.org/page)
+## ✨ Features  
+Extracts the following patterns:  
+- **📧 Emails**  
+  - `user@example.com`, `firstname.lastname@company.co.uk`  
+- **🌐 URLs**  
+  - `https://www.example.com`, `http://subdomain.example.org/page`  
+- **📞 Phone Numbers**  
+  - `(123) 456-7890`, `123-456-7890`, `123.456.7890`  
+- **💳 Credit Card Numbers**  
+  - `1234 5678 9012 3456`, `1234-5678-9012-3456`  
+- **⏰ Time Formats**  
+  - `14:30`, `2:30 PM`  
+- **🖥️ HTML Tags**  
+  - `<div>`, `<a href="...">`  
+- **🏷️ Hashtags**  
+  - `#example`, `#ThisIsAHashtag`  
+- **💰 Currency Amounts**  
+  - `$19.99`, `$1,234.56`  
 
-Phone numbers (e.g., (123) 456-7890, 123-456-7890, 123.456.7890)
+---
 
-Credit card numbers (e.g., 1234 5678 9012 3456, 1234-5678-9012-3456)
+## ⚙️ Prerequisites  
+- Python 3.x  
 
-Time formats (e.g., 14:30, 2:30 PM)
+---
 
-HTML tags
+## 🛠️ Installation  
+1. Clone the repository:  
+   ```bash  
+   git clone https://github.com/Emmanuella00/alu_regex-data-extraction-Emmanuella00.git  
+Navigate to the project directory:
 
-Hashtags (e.g., #example, #ThisIsAHashtag)
-
-Currency amounts (e.g., $19.99, $1,234.56)
-
-Prerequisites
-Python 3.x
-
-Installation
-1.Clone the repository:
-
-git clone https://github.com/Emmanuella00/alu_regex-data-extraction-Emmanuella00.git
-2.Navigate to the project directory:
-
-cd alu_regex-data-extraction-Emmanuella00
+cd alu_regex-data-extraction-Emmanuella00  
 Ensure Python 3.x is installed:
 
-python3 --version
-File Structure
-alu_regex-data-extraction-Emmanuella00/
-│
-├── data-extractor.py        
-└── README.md           
-Usage
+bash
+python3 --version  
+📂 File Structure
+alu_regex-data-extraction-Emmanuella00/  
+├── data-extractor.py  # Main extraction script  
+└── README.md          # Documentation  
+🏃 Usage
 Run the extraction script:
 
-To run the script and see the data extraction in action, simply run the extractor.py file:
+bash
+python3 data-extractor.py  
+Example Output:
+📧 Emails: ['user@example.com', 'firstname.lastname@company.co.uk']  
+🌐 URLs: ['https://www.example.com', 'http://subdomain.example.org/page']  
+📞 Phone Numbers: ['(123) 456-7890', '123-456-7890']  
+...  
+🧠 How It Works
+1. Regex Patterns
+Uses Python’s re library with optimized regex patterns for each data type.Each pattern is designed to match specific formats (e.g., email, URL, phone number).
 
-python3 data-extractor.py
-This will output the extracted data, such as email addresses, URLs, phone numbers, etc., based on the sample text in the script.
+2. Text Processing
+The script processes a sample string (sample_text) that contains various data examples. It applies the regex patterns to find all matches and stores the results in corresponding variables.
 
-How It Works
-Extractor Script (data-extractor.py)
-Regex Patterns: The script uses Python's re library to define regex patterns for each data type. Each pattern is designed to match specific formats (e.g., email, URL, phone number).
+3. Output 
+The extracted data is printed in a labeled format for easy reading.
 
-Text Processing: The script processes a sample string (sample_text) that contains various data examples. It applies the regex patterns to find all matches and stores the results in corresponding variables.
-
-Output: The extracted data is printed in a labeled format for easy reading.
-
-Handling Edge Cases
-Emails:
-
-Handles different valid email formats (e.g., with subdomains, aliases).
-Ignores invalid email formats (e.g., missing "@" symbol).
-URLs:
-
-Supports both HTTP and HTTPS URLs.
-Ignores invalid URLs without a valid scheme or domain.
-Phone Numbers:
-
-Supports various formats like (123) 456-7890, 123-456-7890, and 123.456.7890.
-Handles international numbers and non-standard formats.
-Credit Cards:
-
-Recognizes both spaced and hyphenated formats for credit card numbers.
-Ignores numbers that don't match typical credit card patterns.
-Times:
-
-Supports 24-hour and 12-hour ( AM/PM) formats.
-Ignores invalid times.
-HTML Tags:
-
-Matches standard HTML tags.
-Ignores malformed or unrecognized tags.
-Hashtags:
-
-Correctly identifies hashtags in text.
-Ignores non-hashtag words.
-Currency Amounts:
-
-Recognizes dollar amounts with or without commas and decimal places.
-Ignores non-currency values
-
-Credit:
+🛡️ Handling Edge Cases
+Pattern	Handled Cases	Ignored Cases
+Emails	Subdomains, aliases	Missing @
+URLs	HTTP/HTTPS, subdomains	Invalid schemes/domains
+Phone Numbers	International, multiple formats	Non-standard digit counts
+Credit Cards	Hyphenated/spaced formats	Non-matching patterns
+Time Formats	24-hour, 12-hour (AM/PM)	Invalid times (e.g., 25:61)
+HTML Tags	Standard tags (<div>, <a>)	Malformed tags
+Hashtags	Alphanumeric with underscores	Non-hashtag words
+Currency	Dollar amounts with commas/decimals	Non-currency values
+👏 Credits
 Developed by Emmanuella Ikirezi
