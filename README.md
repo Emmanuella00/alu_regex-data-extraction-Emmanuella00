@@ -44,15 +44,16 @@ Extracts the following patterns:
 cd alu_regex-data-extraction-Emmanuella00  
 3.Ensure Python 3.x is installed:
 
-
-python3 --version  
+python3 --version
+  
 📂 File Structure
+---
 alu_regex-data-extraction-Emmanuella00/  
 ├── data-extractor.py  # Main extraction script  
 └── README.md          # Documentation
----  
+  
  Usage
-
+---
 Run the extraction script:
 
 bash
@@ -71,9 +72,9 @@ The script processes a sample string (sample_text) that contains various data ex
 
 3. Output 
 The extracted data is printed in a labeled format for easy reading.
----
-* Handling Edge Cases
 
+* Handling Edge Cases
+---
 -Emails
 Handled: Subdomains, aliases (e.g., user@sub.example.com).
 
@@ -98,7 +99,7 @@ Ignored: Numbers that don’t match credit card patterns (e.g., 1234-ABCD).
 Handled: 24-hour (14:30), 12-hour with AM/PM (2:30 PM).
 
 Ignored: Invalid times like 25:61 or 13:60 PM.
----
-CREDITS:
 
+CREDITS:
+---
 Developed by Emmanuella Ikirezi
