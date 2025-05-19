@@ -71,14 +71,37 @@ The script processes a sample string (sample_text) that contains various data ex
 The extracted data is printed in a labeled format for easy reading.
 
 🛡️ Handling Edge Cases
-Pattern	Handled Cases	Ignored Cases
-Emails	Subdomains, aliases	Missing @
-URLs	HTTP/HTTPS, subdomains	Invalid schemes/domains
-Phone Numbers	International, multiple formats	Non-standard digit counts
-Credit Cards	Hyphenated/spaced formats	Non-matching patterns
-Time Formats	24-hour, 12-hour (AM/PM)	Invalid times (e.g., 25:61)
-HTML Tags	Standard tags (<div>, <a>)	Malformed tags
-Hashtags	Alphanumeric with underscores	Non-hashtag words
-Currency	Dollar amounts with commas/decimals	Non-currency values
+Emails
+Handled: Subdomains, aliases (e.g., user@sub.example.com).
+
+Ignored: Emails missing @ (e.g., userexample.com).
+
+URLs
+Handled: HTTP/HTTPS URLs with subdomains (e.g., https://docs.example.org).
+
+Ignored: Invalid schemes (e.g., ftp://example.com) or malformed domains.
+
+Phone Numbers
+Handled: International formats, variations like (123) 456-7890 or 123.456.7890.
+
+Ignored: Numbers with non-standard digit counts (e.g., 123-45).
+
+Credit Cards
+Handled: Hyphenated (1234-5678-9012-3456) and spaced formats.
+
+Ignored: Numbers that don’t match credit card patterns (e.g., 1234-ABCD).
+
+Time Formats
+Handled: 24-hour (14:30), 12-hour with AM/PM (2:30 PM).
+
+Ignored: Invalid times like 25:61 or 13:60 PM.
+
+HTML Tags
+Handled: Standard tags like <div>, <a href="...">.
+
+Ignored: Malformed tags (e.g., <div or <a>>).
+
+
 👏 Credits
+
 Developed by Emmanuella Ikirezi
