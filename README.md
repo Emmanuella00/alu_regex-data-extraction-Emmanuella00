@@ -1,11 +1,11 @@
-# 🔍 Regex Data Extraction Tool  
+#  Regex Data Extraction Hackathon
 
-**A Python tool to extract special  data patterns (emails, URLs, phone numbers, etc.) using optimized regex.**  
+**Welcome to the Regex - Onboarding Hackathon tool, a tool that will help us extract critical data like emails, URLs, Phone numbers, Credit card numbers, Hashtags, Html tags, time formats and currency values by the use of Regex**  
 
 ---
 
-## 🚀 Project Overview  
-This Python tool identifies and extracts structured data from text using **highly optimized regular expressions**. Perfect for onboarding hackathons or data preprocessing tasks!  
+##  Project Overview  
+This Python Project for extracting data  from text using highly optimized regex patterns.   
 
 ---
 
@@ -37,20 +37,22 @@ Extracts the following patterns:
 
 ## 🛠️ Installation  
 1. Clone the repository:  
-   ```bash  
+    
    git clone https://github.com/Emmanuella00/alu_regex-data-extraction-Emmanuella00.git  
-Navigate to the project directory:
+2.Navigate to the project directory:
 
 cd alu_regex-data-extraction-Emmanuella00  
-Ensure Python 3.x is installed:
+3.Ensure Python 3.x is installed:
 
-bash
+
 python3 --version  
 📂 File Structure
 alu_regex-data-extraction-Emmanuella00/  
 ├── data-extractor.py  # Main extraction script  
-└── README.md          # Documentation  
-🏃 Usage
+└── README.md          # Documentation
+---  
+ Usage
+
 Run the extraction script:
 
 bash
@@ -69,39 +71,34 @@ The script processes a sample string (sample_text) that contains various data ex
 
 3. Output 
 The extracted data is printed in a labeled format for easy reading.
+---
+* Handling Edge Cases
 
-🛡️ Handling Edge Cases
-Emails
+-Emails
 Handled: Subdomains, aliases (e.g., user@sub.example.com).
 
 Ignored: Emails missing @ (e.g., userexample.com).
 
-URLs
+-URLs
 Handled: HTTP/HTTPS URLs with subdomains (e.g., https://docs.example.org).
 
 Ignored: Invalid schemes (e.g., ftp://example.com) or malformed domains.
 
-Phone Numbers
+-Phone Numbers
 Handled: International formats, variations like (123) 456-7890 or 123.456.7890.
 
 Ignored: Numbers with non-standard digit counts (e.g., 123-45).
 
-Credit Cards
+-Credit Cards
 Handled: Hyphenated (1234-5678-9012-3456) and spaced formats.
 
 Ignored: Numbers that don’t match credit card patterns (e.g., 1234-ABCD).
 
-Time Formats
+-Time Formats
 Handled: 24-hour (14:30), 12-hour with AM/PM (2:30 PM).
 
 Ignored: Invalid times like 25:61 or 13:60 PM.
-
-HTML Tags
-Handled: Standard tags like <div>, <a href="...">.
-
-Ignored: Malformed tags (e.g., <div or <a>>).
-
-
-👏 Credits
+---
+CREDITS:
 
 Developed by Emmanuella Ikirezi
